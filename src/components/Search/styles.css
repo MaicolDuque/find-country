@@ -1,0 +1,87 @@
+.content-search {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  left: 6%;
+  top: 74%;
+  position: absolute;
+  padding-left: 1vw;
+  width: 58%;
+  height: 4.5vw;
+}
+
+input[type=text] {
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  color: var(--color-search);
+  font-size: 1.3vw;
+  height: 100%;
+  outline: none;
+  border-right: 1px solid var(--color-gray);
+  width: 70%;
+}
+
+input::placeholder {
+  color: var(--color-placeholder);
+}
+
+select {
+  border: none;
+  color: var(--color-search);
+  font-size: 1.3vw;
+  height: 100%;
+  outline: none;
+  padding-left: 1vw;
+  width: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+.content-select {
+  position: relative;
+  width: 20%;
+  display: flex;
+}
+
+.content-select::before {
+  background-image: url('./img/arrow.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  content: '';
+  right: 7%;
+  top: 45%;
+  pointer-events: none;
+  width: 9%;
+  height: 17%;
+}
+
+.content-search-lupa {
+  align-items: center;
+  border-radius: 0px 10px 10px 0px;
+  background-color: var(--color-blue-secundary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10%;
+}
+
+.content-search-lupa img {
+  width: 38%;
+}
+
+
+.select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}

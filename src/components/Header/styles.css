@@ -1,0 +1,30 @@
+.App-header {
+  position: relative;
+  display: flex;
+}
+
+.content-description {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-image {
+  width: 50%;
+}
+
+.content-description-info {
+  color: var(--color-blue-main);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 5vw;
+}
+
+.content-description-secundary {
+  color: var(--color-blue-secundary);
+}
+
+img {
+  width: 100%;
+}
