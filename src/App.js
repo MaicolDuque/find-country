@@ -1,11 +1,14 @@
 import Home from './pages/Home';
+import { CountryContextProvider } from './context/CountryContext'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <CountryContextProvider>
+      <div className="App">
+        <Home />
+      </div>
+    </CountryContextProvider>
   );
 }
 

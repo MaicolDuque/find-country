@@ -7,7 +7,6 @@
   left: 6%;
   top: 74%;
   position: absolute;
-  padding-left: 1vw;
   width: 58%;
   height: 4.5vw;
 }
@@ -15,16 +14,17 @@
 input[type=text] {
   border: none;
   border-radius: 10px 0px 0px 10px;
+  border-right: 1px solid var(--color-gray);
   color: var(--color-search);
   font-size: 1.3vw;
   height: 100%;
   outline: none;
-  border-right: 1px solid var(--color-gray);
+  padding-left: 1vw;
   width: 70%;
 }
 
-input::placeholder {
-  color: var(--color-placeholder);
+input:-internal-autofill-selected {
+  background-color: #fff !important;
 }
 
 select {
@@ -67,6 +67,7 @@ select {
   align-items: center;
   border-radius: 0px 10px 10px 0px;
   background-color: var(--color-blue-secundary);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
