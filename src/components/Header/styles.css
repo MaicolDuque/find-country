@@ -4,10 +4,11 @@
 }
 
 .content-description {
-  width: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: initial;
+  padding-left: 6%;
+  width: 50%;
 }
 
 .content-image {

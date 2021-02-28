@@ -1,4 +1,6 @@
 .App {
   background-color: var(--color-background);
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 70px;
 }

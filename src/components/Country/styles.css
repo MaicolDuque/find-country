@@ -1,0 +1,21 @@
+.content-country {
+  display: flex;
+  padding: 6px;
+}
+
+.content-country:hover {
+  background-color: var(--color-hover);
+  cursor: pointer;
+}
+
+.country-flag {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  margin-right: 13px;
+}
+
+.country-name {
+  color: #000000;
+}

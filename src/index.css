@@ -6,8 +6,10 @@
   --color-blue-main: #09295E;
   --color-blue-secundary: #21ADCF;
   --color-gray: #E0E0E0;
+  --color-not-found: #BDBDBD;
   --color-placeholder: #C4C4C4;
   --color-search: #4F4F4F;
+  --color-hover: rgba(33, 173, 207, 0.1);
 }
 
 html {
@@ -25,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

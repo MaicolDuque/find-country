@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { useCountry } from '../../context/CountryContext'
 import lupa from './img/lupa.png'
@@ -16,6 +16,10 @@ export default function Search() {
     setFilterCountries(infoSearch)
   }
 
+  useEffect(() => {
+    setFilterCountries(infoSearch)
+  }, [infoSearch.filter, infoSearch.search])
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="content-search">
@@ -23,10 +27,11 @@ export default function Search() {
         <div className="content-select">
           <select name="filter" onChange={handleChange} value={infoSearch.filter}>
             <option value="">Show All</option>
+            <option value="Favorites">Favorites</option>
             { continents.map(( continent ) => <option key={continent.region}>{continent.name}</option> ) }
           </select>
         </div>
-        <div className="content-search-lupa" onClick={handleSubmit}>
+        <div className="content-search-lupa" onClick={handleSubmit} >
           <img src={lupa} alt="Lupa" />
         </div>
       </div>

@@ -1,0 +1,9 @@
+.name-continent {
+  color: var(--color-blue-main);
+  font-size: 1.5rem;
+}
+
+.container-continent {
+  max-width: 250px;
+  /* float: left; */
+}

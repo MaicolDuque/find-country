@@ -1,0 +1,20 @@
+.content-continents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,max-content));
+  grid-row-gap: 2.5rem;
+  grid-column-gap: 1rem;
+  justify-content: space-between;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 2%;
+}
+
+.content-not-found {
+  color: var(--color-not-found);
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 2%;
+}
