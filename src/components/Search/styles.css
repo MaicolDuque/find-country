@@ -8,7 +8,7 @@
   top: 74%;
   position: absolute;
   width: 58%;
-  height: 4.5vw;
+  height: 70px;
 }
 
 input[type=text] {
@@ -16,7 +16,7 @@ input[type=text] {
   border-radius: 10px 0px 0px 10px;
   border-right: 1px solid var(--color-gray);
   color: var(--color-search);
-  font-size: 1.3vw;
+  font-size: 20px;
   height: 100%;
   outline: none;
   padding-left: 1vw;
@@ -29,8 +29,9 @@ input:-internal-autofill-selected {
 
 select {
   border: none;
+  background-color: #fff;
   color: var(--color-search);
-  font-size: 1.3vw;
+  font-size: 20px;
   height: 100%;
   outline: none;
   padding-left: 1vw;
@@ -85,4 +86,21 @@ select {
   height: 0.5em;
   background-color: var(--select-arrow);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+@media (max-width: 770px){
+  .content-search {
+    height: 35px;
+    width: 80%;
+  }
+
+  input[type=text] {
+    font-size: 12px;
+  }
+
+  select {
+    font-size: 65%;
+    width: 80%;
+  }
+
 }
