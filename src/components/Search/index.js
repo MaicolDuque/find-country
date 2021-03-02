@@ -7,10 +7,12 @@ import './styles.css'
 export default function Search() {
   const { continents, setFilterCountries } = useCountry()
   const [ infoSearch, setInfoSearch ] = useState({ search: '', filter: '' })
+
   const handleChange = ({ target }) => {
     const { name, value } = target
     setInfoSearch({ ...infoSearch, [name]: value })
   }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setFilterCountries(infoSearch)

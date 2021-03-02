@@ -1,16 +1,15 @@
 
 export const getFavoritesCountries = () => {
-  return JSON.parse(localStorage.getItem('favoritesCountries'))
+  return JSON.parse(localStorage.getItem('favoritesCountries')) || ''
 }
 
 export const addFavoriteCountry = (country) => {
   const currentCountries = getFavoritesCountries()
-  if (!currentCountries) return false
-  if (currentCountries[country.region]) {
-    const updatedRegion = [...currentCountries[country.region], country]
-    return localStorage.setItem('favoritesCountries', JSON.stringify({ ...currentCountries, [country.region]: updatedRegion }))
+  if (!currentCountries || !currentCountries[country.region]){
+    return localStorage.setItem('favoritesCountries', JSON.stringify({ ...currentCountries, [country.region]: [country] }))
   }
-  return localStorage.setItem('favoritesCountries', JSON.stringify({ [country.region]: country }))
+  const updatedRegion = [...currentCountries[country.region], country]
+  return localStorage.setItem('favoritesCountries', JSON.stringify({ ...currentCountries, [country.region]: updatedRegion }))
 }
 
 export const deleteFavoriteCountry = (country) => {
@@ -32,4 +31,11 @@ export const hasCountryFavorites = (region) => {
   if (!currentCountries) return false
   if (!currentCountries[region]) return false
   return currentCountries[region].length
+}
+
+export const areThereAnyFavorite = () => {
+  const currentCountries = getFavoritesCountries()
+  if (!currentCountries) return false // to validate when we have not yet added favorites.
+  const objectKeys = Object.keys(currentCountries)
+  return objectKeys.some(region => currentCountries[region].length > 0)
 }

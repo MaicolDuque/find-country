@@ -6,11 +6,12 @@ const groupCountriesByRegion = (acc, country) => {
   } else {
     acc[country.region] = [country]
   }
+  acc['codes'][country.alpha3Code] = country.name
   return acc
 }
 
 const fromApiResponseToCountries = apiResponse => {
-  const groupedByRegion = apiResponse.reduce(groupCountriesByRegion, {})
+  const groupedByRegion = apiResponse.reduce(groupCountriesByRegion, { codes: {} })
   return groupedByRegion
 }
 
